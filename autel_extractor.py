@@ -4,32 +4,6 @@ import os, os.path
 import errno
 import hexdump
 
-'''
-NOTES
-
-filetransfer denotes the start of a file entry, it is immediately follwed by a fileinfo
-**fileinfo typically expresses the file name of the entry
-**filecontent represents the data of the file
- 
-"<filetransfer>"
-"<fileinfo>"
-
-
-
-** = these fields are followed by 8 bytes
-0-4 = length of the entry
-4-8 = ?
-
-
-
-
-'''
-
-# class FileInfo(object):
-#   """docstring for FileInfo"""
-#   def __init__(self, bytes):
-#     self.arg = arg
-    
 
 # Taken from https://stackoverflow.com/a/600612/119527
 def mkdir_p(path):
@@ -41,7 +15,8 @@ def mkdir_p(path):
     else: raise
 
 def safe_open_w(path):
-  ''' Open "path" for writing, creating any parent directories as needed.
+  ''' 
+  Open "path" for writing, creating any parent directories as needed.
   '''
   mkdir_p(os.path.dirname(path))
   return open(path, 'wb')
