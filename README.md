@@ -16,7 +16,7 @@ An example of an unpacked firmware [`EVO_FW_V1.4.9`] can be found in the `extrac
 `python autel_extractor.py -f <firmware> -o <output_dir>`
 
 <br/>
-**Note:** The firmware package is nested, but the tool does not currently unpack the nested levels for you. You will need to rerun the tool and change the `-f` flag to point to your newly unpacked image. You can tell if a file can be further unpacked by looking for `"<filetransfer>"` at the start of the file.
+**Note:** The firmware package is nested, but the tool does not currently unpack the nested levels for you. You will need to rerun the tool and change the `-f` flag to point to your newly unpacked image. You can tell if a file can be further unpacked by looking for `<filetransfer>` at the start of the file.
 
 <br/>
 
