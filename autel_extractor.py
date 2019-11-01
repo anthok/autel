@@ -90,8 +90,6 @@ def main():
   args = parser.parse_args()
 
   bdata = args.filename.read()
-
-  print('LOGO')
   parseEntries(bdata, args.output)
 
   args.filename.close()
